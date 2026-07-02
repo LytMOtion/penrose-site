@@ -823,6 +823,19 @@ section { position: relative; }
   background: rgba(255, 255, 255, 0.04);
   outline: none;
 }
+     /* Kill Safari + Chrome autofill's yellow highlight on the near-black form.
+   The trick: an inset box-shadow the size of the field paints OVER WebKit's
+   autofill background. -webkit-text-fill-color keeps the text visible in white.
+   The huge transition delay is a well-known hack to defeat re-application. */
+.access-form input:-webkit-autofill,
+.access-form input:-webkit-autofill:hover,
+.access-form input:-webkit-autofill:focus,
+.access-form input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 100px var(--near-black) inset !important;
+  -webkit-text-fill-color: var(--white) !important;
+  caret-color: var(--white);
+  transition: background-color 5000s ease-in-out 0s;
+}
 .access-form button {
   background: transparent; border: none; cursor: pointer; color: var(--white);
   padding: 1.2rem 1.6rem;
