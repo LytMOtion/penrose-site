@@ -1219,7 +1219,7 @@ a:focus-visible, button:focus-visible {
 
 <!-- 12 · Private Access
      Klaviyo client subscriptions endpoint. Public Site ID only (UkaUiB) — no server key.
-     List: PENROSE Private Access (JWkk3U). Double opt-in — success message must NOT
+     List: PENROSE Private Access (WJkk3U). Double opt-in — success message must NOT
      claim the visitor is subscribed until they confirm via Klaviyo email. -->
 <section class="private-access" id="private-access" data-nav-state="light">
   <div class="inner">
@@ -1403,7 +1403,7 @@ a:focus-visible, button:focus-visible {
     const msg = document.getElementById('formMsg');
     const submitBtn = document.getElementById('accessSubmit');
     const KLAVIYO_COMPANY_ID = 'UkaUiB';                                    /* public — safe to expose in client code */
-    const KLAVIYO_LIST_ID    = 'JWkk3U';                                    /* PENROSE Private Access */
+    const KLAVIYO_LIST_ID    = 'WJkk3U';                                    /* PENROSE Private Access */
     const KLAVIYO_ENDPOINT   = 'https://a.klaviyo.com/client/subscriptions?company_id=' + KLAVIYO_COMPANY_ID;
     const CUSTOM_SOURCE      = 'PENROSE Private Access — Homepage';
     const originalBtnLabel   = submitBtn.textContent;
