@@ -39,3 +39,9 @@ accessForm?.addEventListener('submit',async event=>{
     button.disabled=false;button.textContent='Request access';
   }
 });
+
+const themeToggle=document.querySelector('.theme-toggle');
+if(localStorage.getItem('penrose-theme')==='dark')document.documentElement.dataset.theme='dark';
+const syncTheme=()=>{const dark=document.documentElement.dataset.theme==='dark';if(themeToggle){themeToggle.textContent=dark?'Light':'Dark';themeToggle.setAttribute('aria-label',dark?'Switch to light mode':'Switch to dark mode')}};
+syncTheme();
+themeToggle?.addEventListener('click',()=>{const dark=document.documentElement.dataset.theme!=='dark';if(dark)document.documentElement.dataset.theme='dark';else delete document.documentElement.dataset.theme;localStorage.setItem('penrose-theme',dark?'dark':'light');syncTheme()});
