@@ -104,6 +104,8 @@ html[data-theme="light"] body{background:#fff;color:#505256}
 html[data-theme="light"] .hero>img,html[data-theme="light"] .page-hero>img{filter:saturate(.72) brightness(.9)}
 html[data-theme="light"] .hero:before{background:linear-gradient(90deg,rgba(16,17,18,.35),transparent 58%),linear-gradient(0deg,rgba(15,16,17,.58),transparent 58%)}
 html[data-theme="light"] .hero-brand h1,html[data-theme="light"] .hero-brand .hero-positioning,html[data-theme="light"] .hero-copy>p:last-child{color:#fff!important}
+html[data-theme="light"] .page-hero .hero-copy h1{color:#fff}
+html[data-theme="light"] .page-hero .hero-copy .eyebrow{color:#c8cbd0}
 html[data-theme="light"] header nav a,html[data-theme="light"] .nav-word,html[data-theme="light"] .menu-toggle,html[data-theme="light"] .theme-toggle{color:#fff}
 html[data-theme="light"] .nav-access{color:#fff!important;border-color:rgba(255,255,255,.55)}
 html[data-theme="light"] .feature-media img,html[data-theme="light"] .product img,html[data-theme="light"] .editorial-grid img{filter:saturate(.76) contrast(.96)}
