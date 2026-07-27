@@ -105,16 +105,17 @@ footer nav{display:flex;gap:26px}
 .footer-meta{text-align:right;font-size:9px;letter-spacing:.08em;color:var(--quiet)}
 .footer-meta a{color:var(--stone);display:block;margin-bottom:8px}
 
-[data-reveal]{opacity:0;transform:translateY(28px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
-[data-reveal].revealed{opacity:1;transform:none}
+html.js [data-reveal]{opacity:0;transform:translateY(28px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+html.js [data-reveal].revealed{opacity:1;transform:none}
 @keyframes hero-in{from{transform:scale(1.04);opacity:.55}to{transform:scale(1);opacity:1}}
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}[data-reveal]{opacity:1;transform:none}}
 
 @media(max-width:800px){
   header{height:72px}.nav-word{font-size:12px}.nav-mark img{width:36px}
-  .menu-toggle{display:block}
-  header nav{position:fixed;inset:0;background:rgba(9,10,11,.98);display:flex;flex-direction:column;justify-content:center;gap:30px;opacity:0;visibility:hidden;transform:translateY(-10px);transition:.4s var(--ease)}
-  body.menu-open header nav{opacity:1;visibility:visible;transform:none}
+  html.js .menu-toggle{display:block}
+  html:not(.js) header nav{display:flex;gap:18px;flex-wrap:wrap;justify-content:flex-end}
+  html.js header nav{position:fixed;inset:0;background:rgba(9,10,11,.98);display:flex;flex-direction:column;justify-content:center;gap:30px;opacity:0;visibility:hidden;transform:translateY(-10px);transition:.4s var(--ease)}
+  html.js body.menu-open header nav{opacity:1;visibility:visible;transform:none}
   header nav a{font-family:Cinzel,serif;font-size:20px;letter-spacing:.1em;color:var(--paper)}
   .nav-access{border:0;padding:0;color:var(--metal)!important}
   .hero{min-height:650px}.hero-copy{bottom:62px;width:calc(100% - 40px)}
