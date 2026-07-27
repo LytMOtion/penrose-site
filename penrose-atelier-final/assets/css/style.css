@@ -37,3 +37,17 @@ html.js .reveal{opacity:0;transform:translateY(28px);transition:opacity .85s var
  .hero{min-height:700px}.hero>img{object-position:62% center}.hero-mark{top:25%;width:62%;left:20px}.hero-mark .wing{width:100px;margin-bottom:11px}.hero-note{display:none}.page-hero{height:76svh;min-height:600px}.page-hero .hero-copy{left:20px;bottom:48px;width:calc(100% - 40px)}.page-hero h1{font-size:50px}
  .chapter{padding:88px 20px}.statement{grid-template-columns:1fr;gap:40px}.statement h2{font-size:51px}.product-story{grid-template-columns:1fr}.product-visual{position:relative;height:72svh}.product-content{padding:70px 20px}.anchors{grid-template-columns:1fr 1fr}.anchor{padding:30px 20px}.collection-item{grid-template-columns:68px 1fr auto;gap:18px}.collection-item .thumb{width:68px;height:84px}.collection-item p{display:none}.collection-item h3{font-size:25px}.product-detail{grid-template-columns:1fr;min-height:auto}.product-gallery{padding:35px 20px}.product-gallery img{max-height:68svh}.product-info{padding:68px 20px}.colorways{flex-wrap:wrap}.field-image{height:75svh}.field-quote{left:20px}.field-quote h2{font-size:50px}.split,.access-grid{grid-template-columns:1fr}.split>div{padding:75px 20px}footer{grid-template-columns:1fr}.footer-meta{text-align:left}
 }
+
+.theme-toggle{background:none;border:0;border-left:1px solid currentColor;padding:2px 0 2px 24px;margin-left:-4px;color:inherit;font-size:9px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;cursor:pointer;opacity:.8}
+.theme-toggle:hover{opacity:1}
+html:not(.js) .theme-toggle{display:none}
+html[data-theme="dark"]{--white:#0b0c0e;--chalk:#15171a;--ink:#f2f3f4;--graphite:#a9acb1;--grey:#80838a;--line:#26282c;--gold:#9aa0a6}
+html[data-theme="dark"] .site-header.scrolled{background:rgba(11,12,14,.92);color:#f2f3f4;border-bottom:1px solid #26282c}
+html[data-theme="dark"] .site-header.scrolled .brand img{filter:invert(1)}
+html[data-theme="dark"] .black-panel{background:#101214}
+html[data-theme="dark"] .colorway{background:transparent}
+html[data-theme="dark"] .colorway:before{border-color:#4a4d52}
+html[data-theme="dark"] .submit{color:#0b0c0e}
+html[data-theme="dark"] input,html[data-theme="dark"] select{border-bottom-color:#3a3d42}
+html[data-theme="dark"] .footer-brand img{filter:invert(1)}
+@media(max-width:800px){html[data-theme="dark"] .site-nav{background:#0e0f11}html[data-theme="dark"] .theme-toggle{border-left:0}}
