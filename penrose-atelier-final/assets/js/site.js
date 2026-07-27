@@ -1,4 +1,22 @@
 const toggle=document.querySelector('.menu-toggle');
+const themeToggle=document.querySelector('.theme-toggle');
+const savedTheme=localStorage.getItem('penrose-theme');
+if(savedTheme==='light')document.documentElement.dataset.theme='light';
+const syncTheme=()=>{
+  const light=document.documentElement.dataset.theme==='light';
+  if(themeToggle){
+    themeToggle.textContent=light?'Dark':'Light';
+    themeToggle.setAttribute('aria-label',light?'Switch to dark mode':'Switch to light mode');
+  }
+};
+syncTheme();
+themeToggle?.addEventListener('click',()=>{
+  const light=document.documentElement.dataset.theme!=='light';
+  if(light)document.documentElement.dataset.theme='light';
+  else delete document.documentElement.dataset.theme;
+  localStorage.setItem('penrose-theme',light?'light':'dark');
+  syncTheme();
+});
 toggle?.addEventListener('click',()=>{
   const open=document.body.classList.toggle('menu-open');
   toggle.setAttribute('aria-expanded',String(open));
